@@ -1,0 +1,43 @@
+
+{
+  "name": "Dokumentasi",
+  "type": "object",
+  "properties": {
+    "nama_file": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "hash_file": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "keterangan": {
+      "type": "string",
+      "maxLength": 300
+    },
+    "foto_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "foto_url"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
