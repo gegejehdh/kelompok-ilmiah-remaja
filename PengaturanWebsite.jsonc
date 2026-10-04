@@ -1,0 +1,39 @@
+{
+  "name": "PengaturanWebsite",
+  "type": "object",
+  "properties": {
+    "judul_website": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "deskripsi_hero": {
+      "type": "string",
+      "maxLength": 600
+    },
+    "info_pendaftaran": {
+      "type": "string",
+      "maxLength": 600
+    },
+    "info_kontak": {
+      "type": "string",
+      "maxLength": 600
+    },
+    "instagram": {
+      "type": "string",
+      "maxLength": 300
+    },
+    "footer_text": {
+      "type": "string",
+      "maxLength": 300
+    }
+  },
+  "required": [],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "
