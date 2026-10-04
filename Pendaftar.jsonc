@@ -1,0 +1,55 @@
+{
+  "name": "Pendaftar",
+  "type": "object",
+  "properties": {
+    "nama": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 100
+    },
+    "kelas": {
+      "type": "string"
+    },
+    "alamat": {
+      "type": "string",
+      "maxLength": 300
+    },
+    "nomor_telepon": {
+      "type": "string",
+      "pattern": "^[0-9]{8,15}$"
+    },
+    "alasan": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "pesan_tambahan": {
+      "type": "string",
+      "maxLength": 500
+    }
+  },
+  "required": [
+    "nama",
+    "kelas",
+    "alamat",
+    "nomor_telepon",
+    "alasan"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {},
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
